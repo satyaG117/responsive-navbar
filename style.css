@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(238, 238, 238);;
+    background: rgb(23, 23, 30);
+    padding: 0.8rem;
+}
+
+.link-list{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.list-item > a{
+    text-decoration: none;
+    color: rgb(238, 238, 238);
+}
+
+.list-item > a:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 30px rgb(255, 255, 255);
+}
+
+.list-container{
+    width: 30%;
+}
+
+.logo{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.toggle-btn{
+    width: 2rem;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.toggle-btn > span{
+    width: 100%;
+    height: 0.1rem;
+    background: rgb(238, 238, 238);
+}
+
+
+
+@media(max-width:700px){
+    .navbar{
+        /* navbar items will align at start except the toggle button */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list-container{
+        /* hide the list container for now */
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .flex{
+        display: flex;
+    }
+
+    .link-list{
+        /* stack the link items and align them to the center */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-item{
+        /* list items take up whole width */
+        width: 100%;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .toggle-btn{
+        display: flex;
+    }
+}
