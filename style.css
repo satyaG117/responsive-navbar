@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,15 +8,23 @@
 
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    color: rgb(238, 238, 238);;
-    background: rgb(23, 23, 30);
-    padding: 0.8rem;
+
+.main-container {
+    margin: 5rem;
 }
 
-.link-list{
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(238, 238, 238);
+    background: rgb(23, 23, 30);
+    padding: 0.8rem;
+    position: fixed;
+    top: 0px;
+}
+
+.link-list {
     height: 100%;
     display: flex;
     align-items: center;
@@ -24,26 +32,26 @@
     list-style: none;
 }
 
-.list-item > a{
+.list-item>a {
     text-decoration: none;
     color: rgb(238, 238, 238);
 }
 
-.list-item > a:hover{
+.list-item>a:hover {
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 30px rgb(255, 255, 255);
 }
 
-.list-container{
+.list-container {
     width: 30%;
 }
 
-.logo{
+.logo {
     font-size: 2rem;
     cursor: pointer;
 }
 
-.toggle-btn{
+.toggle-btn {
     width: 2rem;
     height: 2rem;
     flex-direction: column;
@@ -57,34 +65,53 @@
 }
 
 
-.toggle-btn > span{
+.toggle-btn>span {
     width: 100%;
     height: 0.1rem;
     background: rgb(238, 238, 238);
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+}
 
-@media(max-width:700px){
-    .navbar{
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b1b1b1;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #7b7b7b;
+}
+
+@media(max-width:700px) {
+    .navbar {
         /* navbar items will align at start except the toggle button */
         flex-direction: column;
         align-items: flex-start;
     }
-    .list-container{
+
+    .list-container {
         /* hide the list container for now */
         width: 100%;
         display: none;
         align-items: center;
         justify-content: space-evenly;
-        
+
     }
 
-    .flex{
+    .flex {
         display: flex;
     }
 
-    .link-list{
+    .link-list {
         /* stack the link items and align them to the center */
         display: flex;
         flex-direction: column;
@@ -92,14 +119,14 @@
         align-items: center;
     }
 
-    .list-item{
+    .list-item {
         /* list items take up whole width */
         width: 100%;
         margin: 1rem;
         text-align: center;
     }
 
-    .toggle-btn{
+    .toggle-btn {
         display: flex;
     }
 }
